@@ -1,0 +1,104 @@
+.table-container {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.table {
+  margin-bottom: 0;
+  
+  th {
+    white-space: nowrap;
+    background-color: #f8f9fa;
+  }
+  
+  td {
+    vertical-align: middle;
+  }
+}
+
+// Responsive table styles
+@media (max-width: 768px) {
+  .table-responsive {
+    margin: 0 -1rem;
+    width: calc(100% + 2rem);
+    
+    .table {
+      min-width: 800px; // Ensure table doesn't get too squeezed
+    }
+  }
+  
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+    
+    .page-item {
+      margin: 0;
+    }
+  }
+  
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch !important;
+    
+    > div {
+      text-align: center;
+    }
+  }
+}
+
+// Pagination styles
+.pagination {
+  margin: 0;
+  
+  .page-link {
+    padding: 0.375rem 0.75rem;
+    min-width: 2.5rem;
+    text-align: center;
+    
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  
+  .page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+  }
+  
+  .page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+  }
+}
+
+// Items per page select
+.form-select-sm {
+  padding: 0.25rem 2rem 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+}
+
+// Status badges
+.badge {
+  padding: 0.5em 0.75em;
+  font-weight: 500;
+}
+
+// Action buttons
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  
+  &:focus {
+    box-shadow: none;
+  }
+}

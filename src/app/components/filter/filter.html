@@ -1,0 +1,11 @@
+<div class="mb-4">
+  <label for="statusFilter" class="form-label">Filter by Status:  </label>
+  <select id="statusFilter"
+          class="form-select w-auto d-inline-block"
+          [(ngModel)]="selectedStatus"
+          (ngModelChange)="onStatusChange($event)">
+    <option *ngFor="let status of statuses" [value]="status">
+      {{ status.charAt(0).toUpperCase() + status.slice(1) }}
+    </option>
+  </select>
+</div>
